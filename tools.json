@@ -1,0 +1,20 @@
+[
+  {
+    "name": "ChatGPT Plus",
+    "category": "Redacción y Asistencia",
+    "description": "El asistente de inteligencia artificial líder para creación de contenido y automatización.",
+    "affiliate_link": "https://tu-enlace-de-afiliado-openai.com"
+  },
+  {
+    "name": "Midjourney",
+    "category": "Diseño e Imagen",
+    "description": "Generador de imágenes por IA hiperrealistas a partir de texto.",
+    "affiliate_link": "https://tu-enlace-de-afiliado-midjourney.com"
+  },
+  {
+    "name": "ElevenLabs",
+    "category": "Voz y Audio",
+    "description": "Clonación de voz y síntesis de locuciones ultrarrealistas en múltiples idiomas.",
+    "affiliate_link": "https://tu-enlace-de-afiliado-elevenlabs.com"
+  }
+]

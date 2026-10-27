@@ -1,0 +1,32 @@
+name: Auto-Generate AI Directory
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Se ejecuta todos los días a las 8:00 UTC automáticamente
+  workflow_dispatch: # Permite darle a un botón para ejecutarlo de forma manual cuando quieras
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run generator script
+        run: python generate.py
+
+      - name: Commit and push updated web
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --staged --quiet || git commit -m "Actualización automática del directorio de IA"
+          git push
